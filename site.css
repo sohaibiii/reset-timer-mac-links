@@ -16,16 +16,15 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #1F1E1B;
-    --sheet: #282723;
-    --ink: #ECE7DB;
-    --muted: #A8A296;
-    --rule: #3B3934;
-    --moss: #A3B88E;
-    --moss-strong: #B9CBA6;
-    --sage: #343A2E;
+    --paper: #2F322B;
+    --sheet: #3B4038;
+    --ink: #ECE8DD;
+    --muted: #AEB0A4;
+    --rule: #4A4F45;
+    --moss: #A9BC93;
+    --moss-strong: #BFD0AB;
+    --sage: #454C3E;
   }
-  .shot, .tile img { filter: brightness(.92); }
 }
 
 * { box-sizing: border-box; }
@@ -38,6 +37,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; height: auto; display: block; }
+picture { display: contents; }
 a { color: var(--moss); text-underline-offset: .18em; text-decoration-thickness: 1px; }
 a:hover { color: var(--moss-strong); }
 :focus { outline: none; }
