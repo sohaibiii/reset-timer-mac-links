@@ -1,13 +1,13 @@
 /* Reset for Mac: the site's look, taken from the app (flat, warm paper, moss, hairlines). */
 :root {
-  --paper: #F6F3EB;
-  --sheet: #FCF9F4;
+  --paper: #F4F0E6;
+  --sheet: #FBF8F1;
   --ink: #2E2C27;
   --muted: #6A665C;
   --rule: #DCD6C8;
-  --moss: #556348;
-  --moss-strong: #45513A;
-  --sage: #E4E6D8;
+  --moss: #536247;
+  --moss-strong: #435038;
+  --sage: #E1E4D3;
   --sun: #E2B65B;
   --serif: ui-serif, "New York", "Newsreader", Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
@@ -16,14 +16,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #2F322B;
-    --sheet: #3B4038;
+    --paper: #232620;
+    --sheet: #2D312A;
     --ink: #ECE8DD;
-    --muted: #AEB0A4;
-    --rule: #4A4F45;
-    --moss: #A9BC93;
-    --moss-strong: #BFD0AB;
-    --sage: #454C3E;
+    --muted: #A9AC9F;
+    --rule: #3C4137;
+    --moss: #BDCAA9;
+    --moss-strong: #D0DBBF;
+    --sage: #3A4033;
   }
 }
 
