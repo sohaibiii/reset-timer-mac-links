@@ -38,6 +38,7 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 picture { display: contents; }
+figure { margin: 0; }
 a { color: var(--moss); text-underline-offset: .18em; text-decoration-thickness: 1px; }
 a:hover { color: var(--moss-strong); }
 :focus { outline: none; }
