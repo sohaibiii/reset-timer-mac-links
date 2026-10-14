@@ -1,32 +1,282 @@
-<!doctype html><html lang="en"><head>
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-:root{--paper:#f7f3ea;--ink:#2a2823;--muted:#6b665c;--rule:#d8d1c2;--moss:#4f6b3a}
-@media (prefers-color-scheme:dark){:root{--paper:#1d1c19;--ink:#ece6d8;--muted:#a59f92;--rule:#3a3730;--moss:#9cb784}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
-main{max-width:720px;margin:0 auto;padding:48px 16px 80px}
-h1,h2{font-family:"New York",ui-serif,Georgia,serif;font-weight:600;line-height:1.25}
-h1{font-size:2.1rem;margin:0 0 4px}
-h2{font-size:1.3rem;margin:40px 0 8px;padding-top:16px;border-top:1px solid var(--rule)}
-a{color:var(--moss)}
-.meta{color:var(--muted);margin:0 0 32px}
-nav{font-size:.95rem;margin-bottom:40px}
-nav a{margin-right:16px}
-ul{padding-left:1.2em}
-li{margin:4px 0}
-footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
-</style>
-<title>Reset for Mac</title></head><body><main>
-<nav><a href="./">Reset</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
-<h1>Reset</h1>
-<p class="meta">A menu-bar break coach for the Mac.</p>
-<p>Reset reminds you to step away from the screen and offers short routines for your eyes, body, and breath. It runs on your Mac, works offline, and needs no account.</p>
-<ul>
-<li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="terms.html">Terms of Use</a></li>
-</ul>
-<h2>Support</h2>
-<p>Email <a href="mailto:sohaiba213@gmail.com">sohaiba213@gmail.com</a>. Include your macOS version, your Reset version (in Finder, select Reset in Applications and choose File › Get Info), and what you expected.</p>
-<footer>© 2026 Sohaib Ali · Support: <a href="mailto:sohaiba213@gmail.com">sohaiba213@gmail.com</a></footer></main></body></html>
+<title>Reset: break reminders for your Mac</title>
+<meta name="description" content="Reset is a calm break reminder for the Mac menu bar. It counts the time you actually work, waits out your meetings, and offers a 20-second reset for your eyes, body, or breath. No account. Your history stays on your Mac.">
+<meta property="og:title" content="Reset: break reminders for your Mac">
+<meta property="og:description" content="Work, take a short reset, return. A calm break coach for the Mac menu bar.">
+<meta property="og:image" content="https://sohaibiii.github.io/reset-timer-mac-links/img/break-cat.png">
+<meta name="theme-color" content="#F6F3EB">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="" width="34" height="34"><span>Reset</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap split">
+    <div class="copy">
+      <h1>Work. Take a short reset. Return.</h1>
+      <p class="lede">Reset lives in your Mac's menu bar and counts the time you actually spend working. Before a long stretch runs on, it offers a short break: 20 seconds for your eyes, two minutes to move, ten to step away. Then it hands you back to your work.</p>
+      <div class="actions">
+        <a class="button" href="#features">See how it works</a>
+        <span class="availability">Coming soon to the Mac App Store. Free to download.</span>
+      </div>
+      <ul class="facts">
+        <li>macOS 14 or later</li>
+        <li>Apple silicon and Intel</li>
+        <li>No account</li>
+        <li>Works offline</li>
+      </ul>
+    </div>
+
+    <div class="stage" aria-label="Try a 20-second reset">
+      <p class="stage-title" id="stage-title">Look into the distance.</p>
+      <p class="stage-sub" id="stage-sub" aria-live="polite">Try one now. Find something far away and rest your eyes on it.</p>
+      <div class="stage-body">
+        <img class="cat" src="img/cat-distance.png" alt="Reset's tabby cat sitting on a green hill, looking into the distance" width="403" height="280">
+        <div class="dial">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="face" cx="100" cy="100" r="80"/>
+            <g id="ticks"></g>
+            <circle class="track" cx="100" cy="100" r="88"/>
+            <circle class="ring" id="ring" cx="100" cy="100" r="88" transform="rotate(-90 100 100)"/>
+            <circle class="bead" id="bead" cx="100" cy="12" r="7"/>
+          </svg>
+          <div class="dial-read">
+            <span class="dial-num" id="dial-num">20</span>
+            <span class="dial-unit">seconds</span>
+          </div>
+        </div>
+      </div>
+      <button class="button" id="dial-button" type="button">Start a 20-second reset</button>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap split">
+    <div class="copy">
+      <h2>It counts your work, not the clock</h2>
+      <p>Reset measures active time only. Step away to make coffee or take a call away from the desk, and Reset notices: a natural rest counts as a rest, and the timer starts over.</p>
+      <p>Three rhythms work together, and every interval and length is yours to change. The default follows the familiar 20-20-20 pattern for tired eyes.</p>
+      <table class="rhythm">
+        <thead><tr><th scope="col">Reset</th><th scope="col">Comes after</th><th scope="col">Lasts</th></tr></thead>
+        <tbody>
+          <tr><td>Micro</td><td>20 minutes of work</td><td>20 seconds</td></tr>
+          <tr><td>Recovery</td><td>75 minutes of work</td><td>2 minutes</td></tr>
+          <tr><td>Long</td><td>3 hours of work</td><td>10 minutes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figure>
+      <img class="shot tall" src="img/popover.png" alt="Reset's menu-bar window: a clock dial showing 15:01, five minutes of work left before a 20-second micro reset" width="680" height="1126" loading="lazy">
+      <figcaption class="caption" style="text-align:center">One click on the menu bar shows what comes next.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split flip">
+    <div class="copy">
+      <h2>It knows when not to interrupt</h2>
+      <p>A break in the middle of a call helps no one. Reset holds its breaks by itself, and tells you plainly what it is waiting for.</p>
+      <ul class="ticks">
+        <li>While another app is using the microphone</li>
+        <li>While a video, a presentation, or a screen share keeps the display awake</li>
+        <li>During fullscreen work</li>
+        <li>While Zoom, Microsoft Teams, FaceTime, or an app you choose is in front</li>
+        <li>For a pause in your typing, so a break never lands mid-sentence</li>
+      </ul>
+      <p style="margin-top:20px">Meeting mode holds breaks for 30, 60, or 120 minutes. Working hours keep Reset quiet in the evening and at the weekend.</p>
+    </div>
+    <figure>
+      <img class="shot tall" src="img/popover-held.png" alt="Reset's menu-bar window with a reset due and the note: Paused while your microphone is in use" width="680" height="1182" loading="lazy">
+      <figcaption class="caption" style="text-align:center">Reset never listens. It only asks macOS whether a microphone is in use.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="routines-head">
+      <h2>Twenty-six small routines, and one patient cat</h2>
+      <p class="lede">Each break brings one simple thing to do and a quiet countdown. Reset's cat shows the movement, so you never have to read instructions mid-break.</p>
+    </div>
+    <div class="tiles">
+      <figure class="tile"><img src="img/cat-distance.png" alt="The cat looking at a faraway tree" width="403" height="280" loading="lazy"><figcaption><strong>Look into the distance</strong><span>Eyes, 20 seconds</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-palming.png" alt="The cat cupping its paws over closed eyes" width="311" height="305" loading="lazy"><figcaption><strong>Palming</strong><span>Eyes, up to a minute</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-rolls.png" alt="The cat rolling its shoulders" width="280" height="275" loading="lazy"><figcaption><strong>Gentle shoulder rolls</strong><span>Shoulders</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-lookback.png" alt="The cat turning its head to look over a shoulder" width="239" height="274" loading="lazy"><figcaption><strong>Look over each shoulder</strong><span>Neck</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-walk.png" alt="The cat walking away from a desk" width="366" height="245" loading="lazy"><figcaption><strong>Short walk</strong><span>Movement, 2 minutes</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-standdesk.png" alt="The cat standing at a desk with a laptop" width="368" height="289" loading="lazy"><figcaption><strong>Stand for this stretch</strong><span>Sit-stand desks</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-reach.png" alt="The cat reaching both paws up high" width="239" height="282" loading="lazy"><figcaption><strong>Stretch and refill</strong><span>Longer rest</span></figcaption></figure>
+      <figure class="tile"><img src="img/cat-window.png" alt="The cat sitting by a sunny window" width="357" height="282" loading="lazy"><figcaption><strong>Walk, water, window</strong><span>Longer rest</span></figcaption></figure>
+    </div>
+    <p class="categories">Eyes, shoulders, neck, hands, posture, breathing, movement, sit-stand, and longer rests. One switch keeps every routine seated, you choose which kinds appear, and you can start any of them yourself.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Your day, in plain words</h2>
+      <p class="lede" style="margin-top:18px">Today tells you three things that matter: how long since your last rest, how many breaks you took, and your longest stretch without one. Then the minutes you worked each hour, in a chart that needs no legend.</p>
+    </div>
+    <img class="shot wide-shot" src="img/today.png" alt="Reset's Today window: a micro reset due now, 20 minutes of work since the last rest, 3 of 4 suggested breaks taken, a 55-minute longest stretch, and minutes worked each hour" width="1600" height="1096" loading="lazy">
+    <div class="pair">
+      <div class="copy">
+        <h3>Your next reset, on your desktop</h3>
+        <p class="muted" style="margin-top:8px">With Reset Pro, a widget shows the work left before your next reset and today's three facts, without opening anything.</p>
+      </div>
+      <img class="shot" src="img/widget.png" alt="Reset's desktop widget: 18 minutes of work left, 7 minutes since the last rest, 3 of 4 breaks taken, 52-minute longest stretch" width="728" height="340" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Private by design</h2>
+      <p class="lede" style="margin-top:18px">Reset is a break coach, not a tracker. Everything it knows about your day stays on your Mac.</p>
+    </div>
+    <div class="promises">
+      <div class="promise"><h3>No account, no ads</h3><p>There is nothing to sign up for, and nothing is sold or shown to you but your own breaks.</p></div>
+      <div class="promise"><h3>Nothing about your work</h3><p>Reset never records app names, window titles, what you type, or what is on your screen.</p></div>
+      <div class="promise"><h3>No camera, no microphone</h3><p>Reset never opens either. To hold a break during a call, it only asks macOS whether a microphone is in use.</p></div>
+      <div class="promise"><h3>AI only if you ask</h3><p>Optional Gemini personalization is off until you turn it on, and sends only rounded totals and counts. Never your apps or your words.</p></div>
+    </div>
+    <p style="margin-top:28px"><a href="privacy.html">Read the privacy policy</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <h2>The whole break coach is free</h2>
+      <p class="lede" style="margin-top:18px">Reset Pro adds the tools for people who live in their calendar, want a record, or want breaks they can't wave away.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Reset</h3>
+        <p class="price-note">Free</p>
+        <ul>
+          <li>The menu-bar timer and the Today window</li>
+          <li>Gentle mode: a notification that waits for you</li>
+          <li>Smart mode: a short warning, then a calm full-screen break</li>
+          <li>All 26 routines</li>
+          <li>Every automatic hold: microphone, display, fullscreen, meeting apps</li>
+          <li>Meeting mode, working hours, and pause</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Reset Pro</h3>
+        <p class="price-note">Monthly or yearly with a 7-day free trial, or once with Lifetime</p>
+        <ul>
+          <li>Calendar awareness: breaks wait for busy events</li>
+          <li>Named rhythms that switch by the clock</li>
+          <li>Strict mode, with an emergency exit that always works</li>
+          <li>Focus sessions that count only active work</li>
+          <li>History of your days and weeks, kept up to a year</li>
+          <li>What Reset did: every decision it made for you</li>
+          <li>Shortcuts, Focus filters, and the desktop widget</li>
+          <li>Gemini personalization, optional and off by default</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Reset Pro is sold through the Mac App Store. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the period, and can be managed in your App Store account settings. Lifetime is a one-time purchase. See the <a href="terms.html">terms of use</a>.</p>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <img src="img/icon.png" alt="" width="96" height="96" loading="lazy">
+    <h2>Made for the Mac</h2>
+    <p class="lede" style="margin-top:16px">A native menu-bar app in SwiftUI and AppKit, in light and dark, and in twelve languages. It works offline and keeps working if you decline every permission it asks for.</p>
+    <p class="muted" style="margin-top:22px">Coming soon to the Mac App Store.</p>
+    <p class="fine" style="margin:28px auto 0">Reset suggests breaks and simple routines. It is not medical advice, and it does not diagnose, treat, or prevent any condition. Move only within a comfortable range.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Sohaib Ali</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:sohaiba213@gmail.com">sohaiba213@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const R = 88, C = 2 * Math.PI * R, LENGTH = 20;
+  const ticks = document.getElementById('ticks');
+  for (let i = 0; i < 60; i++) {
+    const major = i % 5 === 0, a = (i * 6 - 90) * Math.PI / 180;
+    const r1 = 76, r2 = major ? 66 : 71;
+    const l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    l.setAttribute('x1', 100 + r1 * Math.cos(a)); l.setAttribute('y1', 100 + r1 * Math.sin(a));
+    l.setAttribute('x2', 100 + r2 * Math.cos(a)); l.setAttribute('y2', 100 + r2 * Math.sin(a));
+    l.setAttribute('class', major ? 'tick major' : 'tick');
+    ticks.appendChild(l);
+  }
+  const ring = document.getElementById('ring'), bead = document.getElementById('bead');
+  const num = document.getElementById('dial-num'), button = document.getElementById('dial-button');
+  const title = document.getElementById('stage-title'), sub = document.getElementById('stage-sub');
+  ring.style.strokeDasharray = C;
+  let left = LENGTH, timer = null;
+
+  function draw() {
+    const f = left / LENGTH;
+    ring.style.strokeDashoffset = C * (1 - f);
+    const a = (-90 + 360 * f) * Math.PI / 180;
+    bead.setAttribute('cx', 100 + R * Math.cos(a));
+    bead.setAttribute('cy', 100 + R * Math.sin(a));
+    bead.style.visibility = f > 0 && f < 1 ? 'visible' : 'hidden';
+    num.textContent = left;
+  }
+  function stop(done) {
+    clearInterval(timer); timer = null;
+    if (done) {
+      title.textContent = 'Welcome back.';
+      sub.textContent = 'That was a micro reset. Reset offers one after every 20 minutes of work.';
+      button.textContent = 'Start again';
+    } else {
+      left = LENGTH; draw();
+      title.textContent = 'Look into the distance.';
+      sub.textContent = 'Try one now. Find something far away and rest your eyes on it.';
+      button.textContent = 'Start a 20-second reset';
+    }
+  }
+  button.addEventListener('click', () => {
+    if (timer) { stop(false); return; }
+    left = LENGTH; draw();
+    title.textContent = 'Look into the distance.';
+    sub.textContent = 'Look away from your screen and focus on something far away.';
+    button.textContent = 'Stop';
+    timer = setInterval(() => { left -= 1; draw(); if (left <= 0) stop(true); }, 1000);
+  });
+  draw();
+})();
+</script>
+</body>
+</html>
