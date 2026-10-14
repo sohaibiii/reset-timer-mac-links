@@ -99,14 +99,14 @@ section:first-of-type { border-top: 0; }
 .facts { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 34px 0 0; padding: 0; list-style: none; font-size: .95rem; color: var(--muted); }
 
 /* The dial: the app's break screen, live */
-.stage { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 36px 28px 30px; text-align: center; }
+.stage { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 36px 28px 30px; text-align: center; }
 .stage-title { font-family: var(--serif); font-size: 1.7rem; line-height: 1.2; margin: 0 0 6px; }
 .stage-sub { color: var(--muted); margin: 0 0 22px; min-height: 1.6em; }
 .stage-body { display: flex; align-items: center; justify-content: center; gap: 20px; }
 .stage-body .cat { width: 42%; max-width: 210px; }
 .dial { width: 56%; max-width: 280px; aspect-ratio: 1; position: relative; }
 .dial svg { width: 100%; height: 100%; display: block; }
-.dial .face { fill: var(--paper); }
+.dial .face { fill: var(--sheet); }
 .dial .track { fill: none; stroke: var(--sage); stroke-width: 9; }
 .dial .ring { fill: none; stroke: var(--moss); stroke-width: 9; stroke-linecap: round; transition: stroke-dashoffset 1s linear; }
 .dial .tick { stroke: var(--muted); stroke-width: 1; opacity: .55; }
