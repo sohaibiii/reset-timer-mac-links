@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--paper:#f7f3ea;--ink:#2a2823;--muted:#6b665c;--rule:#d8d1c2;--moss:#4f6b3a}
+@media (prefers-color-scheme:dark){:root{--paper:#1d1c19;--ink:#ece6d8;--muted:#a59f92;--rule:#3a3730;--moss:#9cb784}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:48px 16px 80px}
+h1,h2{font-family:"New York",ui-serif,Georgia,serif;font-weight:600;line-height:1.25}
+h1{font-size:2.1rem;margin:0 0 4px}
+h2{font-size:1.3rem;margin:40px 0 8px;padding-top:16px;border-top:1px solid var(--rule)}
+a{color:var(--moss)}
+.meta{color:var(--muted);margin:0 0 32px}
+nav{font-size:.95rem;margin-bottom:40px}
+nav a{margin-right:16px}
+ul{padding-left:1.2em}
+li{margin:4px 0}
+footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
+</style>
+<title>Reset Privacy Policy</title></head><body><main>
+<nav><a href="./">Reset</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+<h1>Privacy Policy</h1>
+<p class="meta">Reset for Mac · Effective 14 October 2026</p>
+
+<p>Reset is a menu-bar break coach for the Mac. It has no account, no sign-in, no advertising, and no tracking. Everything it knows about your day stays on your Mac unless you turn on cloud personalization, and even then it sends only the small, rounded numbers listed below.</p>
+
+<h2>What stays on your Mac</h2>
+<ul>
+<li><strong>Activity time.</strong> Active and inactive time in segments, kept 30 days, then only as daily totals.</li>
+<li><strong>Daily totals.</strong> Active minutes, resets suggested, taken, and skipped, natural rests, and each day's note, kept 365 days.</li>
+<li><strong>Resets and focus sessions.</strong> Each reset Reset suggested and what became of it, reset sessions, focus sessions, and which routine was used, kept 30 days.</li>
+<li><strong>What Reset decided for you.</strong> When it held a reset back and which kind of signal held it, how long a break waited for a pause in typing, and similar decisions. Each entry is times and codes, never a name or text, kept 30 days.</li>
+<li><strong>Your preferences.</strong> Mode, rhythm, categories, working hours, protected apps, which signals hold a break, which calendars count, and theme, kept until you change or delete them.</li>
+<li><strong>The widget's snapshot.</strong> Reset's state, the next reset, and today's counts, written to Reset's own group folder for its desktop widget. It never leaves your Mac.</li>
+</ul>
+<p>Reset never records which app or window you use, what you type, what is on your screen, your name, your email, or your location.</p>
+
+<h2>Signals Reset reads, and does not keep</h2>
+<p>To avoid interrupting you at a bad moment, Reset asks macOS a few yes-or-no questions. The answers are used in memory only, never sent anywhere, and never written down except as the fact that a reset was held and for how long.</p>
+<ul>
+<li><strong>Microphone in use.</strong> Whether another app is using an audio input. Reset never uses the camera or microphone, opens no audio stream, and asks for no Microphone permission. It reads no app or device name.</li>
+<li><strong>Display kept awake.</strong> Whether another app is keeping the display awake, as during a video or presentation. Reset reads nothing on your screen.</li>
+<li><strong>Fullscreen.</strong> The size and position of the front window, from the list macOS keeps. Reset never reads window titles or contents and asks for no Accessibility permission.</li>
+<li><strong>A pause in typing.</strong> How many seconds ago a key was last pressed or the pointer last dragged. Reset never learns which key was pressed, how many, or how fast.</li>
+<li><strong>Calendar (optional).</strong> If you allow it, the start and end, free or busy status, and your own reply for events on the calendars you choose. Never an event's title, notes, location, or attendees. Reset never changes your calendar.</li>
+<li><strong>Focus filters and Shortcuts.</strong> A Focus you add Reset to can tell it to hold breaks or use a mode. Shortcuts actions do what Reset's own buttons do. Nothing about them is sent anywhere.</li>
+</ul>
+
+<h2>Permissions, all optional</h2>
+<ul>
+<li><strong>Notifications</strong> let Reset remind you gently. Without them, the menu-bar timer and break screens still work.</li>
+<li><strong>Calendar</strong> is asked only when you click Enable in Settings. Without it, everything else works.</li>
+<li><strong>Open at login</strong> is a normal macOS login item you control in Settings.</li>
+</ul>
+
+<h2>Cloud personalization (off until you turn it on)</h2>
+<p>Cloud personalization is optional and part of Reset Pro. It is turned on only with the switch in Settings › Personalization &amp; privacy, which lists what is sent before you choose. Nothing is sent until you turn it on.</p>
+<p>When on, Reset asks its own service to rank the routines Reset already has and to choose which of your locally computed facts are worth showing. The service uses Gemini Flash on Google Cloud Vertex AI. What is sent:</p>
+<ul>
+<li>version numbers of the app's catalog and rules, and your language code;</li>
+<li>your active minutes over the last seven days, rounded to five minutes, split into morning, afternoon, and evening;</li>
+<li>how many resets you completed or skipped, by category;</li>
+<li>which routines are eligible for you, your rhythm settings, and whether you prefer seated routines;</li>
+<li>a few rounded numbers for the daily insight, such as resets taken of resets suggested;</li>
+<li>a random request ID.</li>
+</ul>
+<p>Nothing else: no timestamps of individual actions, no app names, no free text. The model can only pick from routines the app sent, and the words you see are written on your Mac. Requests are limited to a few per day and are never made during a break. If the service is unreachable, Reset uses its local rotation.</p>
+<p><strong>No account.</strong> Turning personalization on creates a private key on your Mac (in the Secure Enclave where available) and registers its public half with the service. The service knows your installation only by a hash of that key. No name, email, or device serial is involved.</p>
+<p><strong>What the service keeps.</strong> Your registration, under that hash, until 30 days pass without use or until you delete it. Rate-limit records expire within three days. A one-way hash of each request is kept for 24 hours to recognise repeats. The service stores none of the numbers above and none of the model's answers. Its logs record route names, status codes, timings, and token counts, never request contents. Google Cloud's own request logs may record your IP address for a limited time; Reset does not read or use them. Google's Vertex AI terms state that customer prompts are not used to train Google's models.</p>
+
+<h2>Purchases</h2>
+<p>Reset Pro is sold through the Mac App Store. Apple handles payment, trials, renewals, and refunds; Reset never sees your payment details. The app checks with Apple, on your Mac, whether a purchase is active. Nothing about your purchase is sent to Reset's service.</p>
+
+<h2>Deleting your data</h2>
+<p>Settings › Personalization &amp; privacy › <strong>Delete history</strong> removes your history and keeps your settings. <strong>Reset all data</strong> removes the local database, your preferences, the Keychain items, and the widget's file, and asks the service to delete your registration. If the service cannot be reached, the request is retried later. You can also delete the app and its folder in <code>~/Library/Containers/com.social.reset</code>.</p>
+
+<h2>Children</h2>
+<p>Reset collects no personal information from anyone, including children.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="https://github.com/sohaibiii/reset-timer-mac-links/issues">open an issue on GitHub</a>.</p>
+<footer>© 2026 Sohaib Ali · Questions: <a href="https://github.com/sohaibiii/reset-timer-mac-links/issues">open an issue</a></footer></main></body></html>
